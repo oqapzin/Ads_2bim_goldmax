@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar&family=Anybody:wght@300&family=DM+Sans:wght@400;700&family=Inter:wght@300&family=Koulen&family=Rock+3D&family=Source+Code+Pro&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+body {
+    background: url("./img/login/background.svg");
+    background-color: #000;
+}
+
+/* CSS - LOGO TOPO */
+
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.nav-logo img {
+    height: 100px;
+}
+
+/* CSS - LOGIN */
+
+#formInfo {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 3% 0;
+    background-color: #F6C000;
+    opacity: 0.85;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #05050566;
+    width: 460px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.login_text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: -30px;
+    padding-bottom: 40px;
+    color: #000;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.form {
+    padding: 50px;
+}
+
+.form-design {
+    margin-bottom: 10px;
+    padding-bottom: 70px;
+    position: relative;
+}
+
+.form-design input {
+    border: 2px solid #FFFFFF;
+    border-radius: 15px;
+    display: block;
+    font-size: 25px;
+    width: 100%;
+    padding: 10px;
+}
+
+.form-design button {
+    background-color: black;
+    color: #FFFFFF;
+    font-size: 18px;
+    display: block;
+    border-radius: 50px;
+    width: 300px;
+    padding: 15px;
+    margin-inline: auto;
+    transition: all 0.4s;
+}
+
+.form-design input::placeholder {
+    text-align: center;
+}
+
+.form-design button:hover {
+    background-color: #FFFFFF;
+    color: #000;
+}
+
+/* CSS - SISTEMA DE ABERTURA DE SENHA */
+
+.form-design .passwordImage {
+    position: absolute;
+    right: 12px;
+    top: 17px;
+    opacity: 30%;
+}
+
+
+/* CSS - DESABILITAR BORDAS PADRÕES */
+
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+/* CSS - ALERTAS BOOTSTRAP */
+
+.displayAnim,
+.displayAnimSucess {
+    display: none;
+}
+
+.qaAnim {
+  position: relative;
+  animation: animateleft 0.4s;
+}
+
+.qaAnimReturn {
+    position: relative;
+    animation: animateleftreturn 0.4s;
+  }
+
+.position {
+    display: flex;
+    position: relative;
+    margin-top: -560px;
+    margin-left: 200px;
+}
+
+/* CSS - RESPONSIVIDADE*/
+
+@media (max-width: 1024px) {
+
+    
+    .position {
+        display: flex;
+        position: relative;
+        margin-top: -600px;
+        margin-left: 14px;
+    }
+    
+
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        margin-inline: 8px;
+    }
+
+    .nav-logo {
+        margin-top: 5px;
+        margin-bottom: 5rem;
+    }
+
+    .nav-logo img {
+        height: 100px;
+    }
+
+    .form-design input {
+        border: 2px solid #FFFFFF;
+        border-radius: 15px;
+        display: block;
+        margin-inline: -27px;
+        font-size: 20px;
+        width: 120%;
+        padding: 10px;
+    }
+    
+    .form-design button {
+        font-size: 16px;
+        display: block;
+        width: 250px;
+        padding: 13px;
+        margin-inline: auto;
+        margin-bottom: -10px;
+    }
+
+    .position {
+        display: flex;
+        position: relative;
+        margin-top: -700px;
+        margin-left: 14px;
+    }
+    
+    .form-design .passwordImage {
+        position: absolute;
+        right: -20px;
+        top: 13px;
+        opacity: 30%;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .container {
+        margin-inline: 8px;
+    }
+
+    .nav-logo {
+        margin-bottom: 3rem;
+    }
+
+    .nav-logo img {
+        height: 60px;
+    }
+
+    .form-design input {
+        border: 2px solid #FFFFFF;
+        border-radius: 15px;
+        display: block;
+        margin-inline: -27px;
+        font-size: 20px;
+        width: 120%;
+        padding: 10px;
+    }
+    
+    .form-design button {
+        font-size: 16px;
+        display: block;
+        width: 250px;
+        padding: 13px;
+        margin-inline: auto;
+        margin-bottom: -10px;
+    }
+
+    .position {
+        display: flex;
+        position: relative;
+        margin-top: -700px;
+        margin-left: 14px;
+    }
+    
+    .form-design .passwordImage {
+        position: absolute;
+        right: -20px;
+        top: 13px;
+        opacity: 30%;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .container {
+        margin-left: 8px;
+    }
+
+    .nav-logo img {
+        height: 55px;
+    }
+
+    .form-design input {
+        border: 2px solid #FFFFFF;
+        border-radius: 15px;
+        display: block;
+        margin-inline: -27px;
+        font-size: 20px;
+        width: 130%;
+        padding: 10px;
+    }
+    
+    .form-design button {
+        font-size: 16px;
+        display: block;
+        width: 180px;
+        padding: 11px;
+        margin-inline: auto;
+        margin-bottom: -10px;
+    }
+
+    .position {
+        display: flex;
+        position: relative;
+        margin-top: -700px;
+        margin-left: 14px;
+    }
+    
+    .form-design .passwordImage {
+        position: absolute;
+        right: -20px;
+        top: 13px;
+        opacity: 30%;
+    }
+
+}
+
+@keyframes animateleft{
+    from{
+        left:-300px;
+    } 
+    to{
+        left: 0;
+        opacity:1
+    }
+}
+
+
+@keyframes animateleftreturn{
+    from{
+        left: 0px;
+        opacity:1
+    } 
+    to{
+        left:-300px;
+        opacity:0
+    }
+}

@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar&family=Anybody:wght@300&family=DM+Sans:wght@400;700&family=Inter:wght@300&family=Koulen&family=Rock+3D&family=Source+Code+Pro&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    background-color: black;
+}
+
+.profiles-anim {
+    position: relative;
+    animation: animatetop 0.4s;
+}
+
+.profiles {
+    display: flex;    
+    flex-direction: column;
+    width: 100%;
+    min-height: 87vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.profiles h1 {
+    color: #fff;
+    margin-bottom: 100px;
+    margin-top: -80px;
+    font-size: 70px;
+    font-weight: 400;
+    font-weight: unset;
+}
+
+.profile .list {
+    float: left;
+    padding: 1.0rem;
+}
+
+.profile .list a .image img{
+    height: 10vw;
+    width: 10vw;
+    max-height: 200px;
+    max-width: 200px;
+    min-height: 84px;
+    min-width: 84px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-color: #333;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: none;    
+}
+
+.profile .list a .image:hover {
+    background-color: none;
+}
+
+.profile .list a .image:hover img{
+    border-style: solid;
+    border-color: #ffffff;
+    color: #fff;
+}
+
+.profile .list a .image:hover .profile-name{
+    color: #fff;
+}
+
+.profile .profile-name {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    color: #808080;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0.6em 0;
+}
+
+.nav-logo img {
+    height: 80px;
+    margin-bottom: 210px;
+}
+
+@media (max-width: 425px) {
+    body {
+        background-color: #050505d7;
+    }
+    
+    .nav-logo img {
+        margin-top: 10px;
+        margin-bottom: 130px;
+        height: 60px;
+    }
+
+    .profiles h1 {
+        font-size: 40px;
+    }
+
+    .profile .list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 70px;
+
+    }
+    
+}
+
+@media (max-width: 375px) {
+    body {
+        background-color: #050505d7;
+    }
+    
+    .nav-logo img {
+        margin-top: 10px;
+        margin-bottom: 130px;
+        height: 60px;
+    }
+
+    .profiles h1 {
+        font-size: 35px;
+    }
+
+    .profile .list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+
+    }
+    
+}
+
+@media (max-width: 320px) {
+    body {
+        background-color: #050505d7;
+    }
+    
+    .nav-logo img {
+        margin-top: 10px;
+        margin-bottom: 130px;
+        height: 50px;
+    }
+
+    .profiles h1 {
+        font-size: 30px;
+    }
+
+    .profile .list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30px;
+
+    }
+    
+}
+
+
+/* CSS - ANIMAÇÃO */
+
+@keyframes animatetop{
+    from{
+        top: -3000px;
+        opacity:0
+    } 
+    to{
+        top:0;
+        opacity:1
+    }
+}

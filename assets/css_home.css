@@ -1,0 +1,1207 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar&family=Anybody:wght@300&family=DM+Sans:wght@400;700&family=Inter:wght@300&family=Koulen&family=Rock+3D&family=Source+Code+Pro&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    text-decoration: none;
+}
+
+body {
+    display: flex;    
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: black;
+}
+
+.loading_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    animation: animatetop 3s;
+}
+
+.loading_off {
+    display: none;
+}
+
+.anim {
+    animation: animateright 3s;
+}
+
+.navbar {
+    border-radius: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 60px;
+}
+
+.navbar .nav-icons li,
+.navbar .nav-infos li,
+.filmes li {
+    display: inline-block;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.navbar .nav-icons li a img {
+    height: 20px;
+}
+
+/* CSS - INFOS */
+
+.nav-display {
+    display: block;
+}
+
+.navbar .nav-infos li {
+    position: relative;
+    float: right;
+    bottom: 1px;
+}
+
+.navbar .nav-infos li a {
+    color: aliceblue;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+.navbar .nav-infos li a:hover {
+    color: #F6C000;
+}
+
+/* CSS - INFOS RESPONSIVE*/
+
+.navbar .nav-responsive-display {
+    display: none;
+}
+
+.navbar .nav-responsive-display .nav-responsive a{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    color: aliceblue;
+    font-size: 12px;
+    text-decoration: none;
+    margin-left: -30px;
+}
+
+
+.navbar .nav-responsive-display .nav-responsive a:hover {
+    color: #F6C000;
+}
+
+.navbar .nav-responsive-display .infos {
+    display: none;
+    position: absolute;
+    width: 132px;
+    height: 200px;
+    z-index: 2;
+    top: 80px;
+    left: 1px;
+    opacity: 0.8;
+    border-radius: 15px;
+    background: #1E1E17;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left: -40px;
+}
+
+.navbar .nav-responsive-display .infos li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.navbar .nav-responsive-display .infos a{
+    display: flex;
+    text-align: center;
+    color: aliceblue;
+    font-size: 12px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+.navbar .nav-responsive-display .infos .seta{
+    position: relative;
+    left: 90px;
+    bottom: 28px;
+}
+
+.navbar .nav-responsive-display .infos a:hover {
+    color: #F6C000;
+}
+
+/* CSS - LOGO MEIO */
+
+.navbar .nav-logo {
+    display: inline-block  ;   
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.navbar .nav-logo img{
+    position: relative;
+    width: 280px;
+    height: 60px;
+    top: -24px;
+}
+
+/* CSS - MENU DE GERENCIAMENTO */
+
+.gerenciar {
+    display: none;
+}
+
+.gerenciar .box {
+    position: absolute;
+    width: 132px;
+    height: 211px;
+    left: 50px;
+    top: 90px;
+    z-index: 1;
+    opacity: 0.8;
+    border-radius: 15px;
+    background: #1E1E17;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.gerenciar .seta {
+    position: relative;
+    left: 15px;
+    bottom: 28px;
+}
+
+.gerenciar .box .options .text,
+.gerenciar .box .options .button {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    font-size: 10.90px;
+    color: #FFFFFF;
+    margin-top: -18px;
+    margin-bottom: 5px;
+    margin-left: -12px;
+}
+
+.gerenciar .box .options .button {
+    display: inline-block;
+    color: #000000;
+    background: #D9D9D9;
+    width: 92px;
+    height: 20px;
+    border-radius: 2px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.gerenciar .box .options .text .sair {
+    display: block;
+    position: absolute;
+    bottom: 6px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+.gerenciar .box .options .text .gerenciar {
+    display: block;
+    bottom: 6px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+.gerenciar .box .options .text .sair:hover,
+.gerenciar .box .options .text .gerenciar:hover {
+    color: #F6C000;
+}
+
+/* CSS - MENU DE ALERTAS */
+
+.alerts {
+    display: none;
+}
+
+.alerts .alert-box {
+    position: absolute;
+    width: 132px;
+    height: 211px;
+    left: 94px;
+    top: 90px;
+    background: #1E1E17;
+    opacity: 0.8;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.alerts .alert-box .alert-arrow {
+    position: relative;
+    left: 27px;
+    bottom: 28px;
+}
+
+.alerts .alert-box .alert-texts li{
+    display: flex;
+    margin-top: -14px;
+    margin-bottom: 32px;
+    margin-left: -30px;
+    font-size: 9.80px;
+    color: aliceblue;
+}
+
+/* CSS - INFORMAÇÕES DO FILME */
+
+.info-film-display {
+    display: none;
+}
+
+.info-film {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 1700px;
+    height: 443px;
+    background-color: #0B0A01;
+    border-radius: 25px;
+    margin-top: -443px;
+    top: -10px;
+    margin-inline: auto;
+    z-index: 3;
+}
+
+.info-film .image img {
+    display: flex;
+    position: relative;
+    right: 310px;
+    width: 600px;
+
+}
+
+.info-film .texts .one-text {
+    width: 600px;
+    margin-top: -10px;
+    margin-left: -280px;
+}
+
+.info-film .texts .two-text {
+    width: 580px;
+    margin-top: 50px;
+    margin-left: -280px;
+}
+
+.info-film .texts .three-text {
+    width: 600px;
+    margin-top: 60px;
+    margin-left: -280px;
+}
+
+.info-film .texts h1 {
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.info-film .close {
+    display: flex;
+    position: relative;
+    top: -180px;
+    right: -360px;
+}
+
+.info-film .extras {
+    display: flex;
+    position: relative;
+    top: 170px;
+    right: -320px;
+}
+
+.info-film .extras .film-play {
+    margin-left: -80px;
+}
+
+
+/* CSS - INFORMAÇÕES DO FILME - RESPONSIVO */
+
+.inf-film-display-responsive {
+    display: none;
+}
+
+.info-responsive {
+    position: absolute;
+    background-color: #121111;
+    width: 100vw;
+    height: 92vh;
+    top: 0;
+    z-index: 4;
+}
+    
+.info-responsive .image img {
+    display: flex;
+    position: relative;
+    width: 300px;
+    top: 28px;
+    margin-inline: auto;
+}
+
+.inf-film-display-responsive .info-responsive .texts .one-text {
+    width: 300px;
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.inf-film-display-responsive .info-responsive .texts .two-text {
+    width: 300px;
+    height: 300px;
+    margin-top: -50px;
+    margin-left: 10px;
+}
+
+.inf-film-display-responsive .info-responsive .texts .three-text {
+    width: 300px;
+    height: 250px;
+    margin-top: -140px;
+    margin-left: 10px;
+}
+
+.inf-film-display-responsive .info-responsive .texts h1 {
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.inf-film-display-responsive .info-responsive .close {
+    display: flex;
+    position: relative;
+    top: -850px;
+    right: -288px;
+}
+
+.inf-film-display-responsive .info-responsive .extras {
+    display: flex;
+    position: relative;
+    top: -160px;
+    right: -200px;
+}
+
+.inf-film-display-responsive .info-responsive .extras .film-play {
+    margin-left: -170px;
+}
+
+/* CSS - BARRA DE PESQUISA*/
+
+.pesquisa {
+    display: none;
+    width: 207px;
+    height: 28px;
+    position: relative;
+    left: 13rem;
+    bottom: 1.5rem;
+    margin-bottom: -1.74rem;
+}
+
+.pesquisa input {
+    border-radius: 20px;
+    border-style: none;
+    background-color: #D9D9D9;
+    display: block;
+    color: #716E6E;
+    text-indent: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    width: 100%;
+    padding: 5px;
+}
+
+.pesquisa textarea:focus, 
+.pesquisa input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.pesquisa input::placeholder,
+.pesquisa input textarea {
+    text-indent: 10px;
+}
+
+/* CSS -  BOOTSTRAP CAROUSEL */
+
+.carousel-inner {
+    margin-top: 30px;
+    height: 30rem;
+}
+
+/* CSS - GRID FILMES */
+
+.filmes-imagens {
+    display: flex;
+    margin-inline: auto;
+    margin-top: 65px;
+    width: 100%;
+}
+
+.filmes-imagens li {
+    display: flex;
+    text-decoration: none;
+}
+
+.filmes-imagens li img {
+    width: 175px;
+    height: 258px;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.filmes-imagens .texto h1 {
+    color: aliceblue;
+    font-size: 40px;
+    position: relative;
+    top: -50px;
+    left: 202px;
+}
+
+/* CSS - TRAILER */
+
+.trailer {
+    display: block;
+}
+
+.trailer .trailer-video {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    top: -500px;
+    margin-bottom: -533px;
+    z-index: 4;
+}
+
+/* CSS - ANIMAÇÕES */
+
+@keyframes animatetop{
+    from{
+        top:0;
+        opacity:1
+    } 
+    to{
+        top:-300px;
+        opacity:0
+    }
+}
+
+@keyframes animateright{
+    from{
+        right:-300px;
+        opacity:0
+    } to{
+        right:0;
+        opacity:1
+    }
+}
+
+/* CSS - MEDIA */
+
+@media (max-width: 768px) {
+
+    .nav-display {
+        display: none;
+    }
+
+    .navbar .nav-responsive-display {
+        display: block;
+    }
+
+    .navbar .nav-icons li,
+    .navbar .nav-infos li,
+    .filmes li {
+        display: inline-block;
+        padding: 12px;
+        margin-top: 12px;
+    }
+
+    .navbar .nav-logo img{
+        position: relative;
+        left: -140px;
+        width: 258px;
+        height: 32px;
+        top: -10px;
+    }
+    
+    .navbar .nav-icons li a{
+        margin-left: -35px;
+        cursor: all-scroll;
+    }
+
+    .navbar .nav-icons li a img{
+        height: 20px;
+        margin-right: 25px;
+    }   
+
+    .gerenciar .box {
+        position: absolute;
+        width: 124px;
+        height: 201px;
+        left: 14px;
+        top: 88px;
+    }
+
+    .gerenciar .box .options .text,
+    .gerenciar .box .options .button {
+        font-size: 9px;
+        margin-top: -20px;
+        margin-bottom: 5px;
+        margin-left: -18px;
+    }
+
+    .gerenciar .box .options .button {
+        width: 88px;
+        height: 16px;
+    }
+
+    .alerts .alert-box {
+        position: absolute;
+        width: 124px;
+        height: 201px;
+        left: 41px;
+        top: 88px;
+    }
+
+    .alerts .alert-box .alert-texts li{
+        margin-top: -14px;
+        margin-bottom: 32px;
+        margin-left: -30px;
+        font-size: 8.80px;
+    }
+
+
+    .filmes-imagens {
+        position: relative;
+        height: 280px;
+        width: 90%;
+        overflow: auto;
+        will-change: auto;
+        direction: ltr;
+        margin-top: 40px;
+
+    }
+
+    .filmes-imagens li {
+        display: flex;
+        position: relative;
+        text-decoration: none;
+        left: -169px;
+        bottom: -66px;
+        margin-bottom: 100px;
+    }
+    
+    .filmes-imagens li img {
+        width: 115px;
+        height: 200px;
+    }
+    
+    .filmes-imagens .texto h1 {
+        color: aliceblue;
+        font-size: 30px;
+        top: 18px;
+        left: -10px;
+        overflow: visible;
+    }
+
+    
+    .navbar .nav-responsive-display .nav-responsive a{
+        font-size: 18px;
+        top: 35px;
+        left: 650px;
+    }
+    
+    .navbar .nav-responsive-display .infos {
+        top: 88px;
+        left: 580px;
+    }
+
+    .carousel-inner {
+        margin-top: 30px;
+        height: 18em;
+    }
+
+    .pesquisa {
+        width: 188px;
+        height: 20px;
+        left: 8.6rem;
+        bottom: 1.5rem;
+        margin-bottom: -1.27rem;
+    }
+    
+    .pesquisa input {
+        font-size: 10px;
+        width: 80%;
+    }
+
+    .info-responsive {
+        width: 78vw;
+        height: 78vh;
+    }
+
+    .inf-film-display-responsive .info-responsive .extras {
+        right: -340px;
+        top: -200px;
+    }
+
+    .inf-film-display-responsive .info-responsive .close {
+        top: -850px;
+        right: -560px;
+    }
+
+    .info-responsive .image img {
+        width: 300px;
+        top: 28px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .one-text {
+        margin-top: 38px;
+        margin-left: 150px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .two-text {
+        margin-top: -115px;
+        margin-left: 150px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .three-text {
+        margin-top: -160px;
+        margin-left: 150px;
+    }
+
+    .inf-film-display-responsive .info-responsive .texts h1 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 425px) {
+    .nav-display {
+        display: none;
+    }
+
+    .navbar .nav-responsive-display {
+        display: block;
+    }
+
+    .navbar .nav-icons li,
+    .navbar .nav-infos li,
+    .filmes li {
+        display: inline-block;
+        padding: 12px;
+        margin-top: 12px;
+    }
+
+    .navbar .nav-logo img{
+        position: relative;
+        left: -30px;
+        width: 248px;
+        height: 24px;
+        top: -74px;
+    }
+    
+    .navbar .nav-icons li a{
+        margin-left: -45px;
+        cursor: all-scroll;
+    }
+
+    .navbar .nav-icons li a img{
+        height: 15px;
+    }   
+
+    .gerenciar .box {
+        position: absolute;
+        width: 120px;
+        height: 197px;
+        left: 2px;
+        top: 88px;
+    }
+
+    .gerenciar .box .options .text,
+    .gerenciar .box .options .button {
+        font-size: 8.80px;
+        margin-top: -20px;
+        margin-bottom: 5px;
+        margin-left: -18px;
+    }
+
+    .gerenciar .box .options .button {
+        width: 88px;
+        height: 16px;
+    }
+
+    .alerts .alert-box {
+        position: absolute;
+        width: 120px;
+        height: 197px;
+        left: 17px;
+        top: 88px;
+    }
+
+    .alerts .alert-box .alert-texts li{
+        margin-top: -14px;
+        margin-bottom: 32px;
+        margin-left: -30px;
+        font-size: 8.80px;
+    }
+
+
+    .filmes-imagens {
+        position: relative;
+        height: 280px;
+        width: 100%;
+        overflow: auto;
+        will-change: auto;
+        direction: ltr;
+        margin-top: 40px;
+
+    }
+
+    .filmes-imagens li {
+        display: flex;
+        position: relative;
+        text-decoration: none;
+        left: -169px;
+        bottom: -66px;
+        margin-bottom: 100px;
+    }
+    
+    .filmes-imagens li img {
+        width: 115px;
+        height: 200px;
+    }
+    
+    .filmes-imagens .texto h1 {
+        color: aliceblue;
+        font-size: 30px;
+        top: 18px;
+        left: -10px;
+        overflow: visible;
+    }
+
+    .carousel-inner {
+        margin-top: 30px;
+        height: 11.80em;
+    }
+
+    .navbar .nav-responsive-display .nav-responsive a{
+        font-size: 13px;
+        top: 35px;
+        left: 350px;
+    }
+    
+    .navbar .nav-responsive-display .infos {
+        top: 80px;
+        left: 270px;
+    }
+
+    .info-responsive {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .inf-film-display-responsive .info-responsive .extras {
+        right: -230px;
+        top: -200px;
+    }
+
+    .info-responsive .image img {
+        width: 300px;
+        top: 28px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .one-text {
+        margin-left: 50px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .two-text {
+        margin-left: 50px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .three-text {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 375px) {
+    .nav-display {
+        display: none;
+    }
+
+    .navbar .nav-responsive-display {
+        display: block;
+    }
+
+    .navbar .nav-icons li,
+    .navbar .nav-infos li,
+    .filmes li {
+        display: inline-block;
+        padding: 12px;
+        margin-top: 12px;
+    }
+
+    .navbar .nav-logo img{
+        position: relative;
+        left: -50px;
+        width: 240px;
+        height: 20px;
+        top: -74px;
+    }
+    
+    .navbar .nav-icons li a{
+        margin-left: -45px;
+        cursor: all-scroll;
+    }
+
+    .navbar .nav-icons li a img{
+        height: 15px;
+    }   
+
+    .gerenciar .box {
+        position: absolute;
+        width: 120px;
+        height: 197px;
+        left: 2px;
+        top: 88px;
+    }
+
+    .gerenciar .box .options .text,
+    .gerenciar .box .options .button {
+        font-size: 8.80px;
+        margin-top: -20px;
+        margin-bottom: 5px;
+        margin-left: -18px;
+    }
+
+    .gerenciar .box .options .button {
+        width: 88px;
+        height: 16px;
+    }
+
+    .alerts .alert-box {
+        position: absolute;
+        width: 120px;
+        height: 197px;
+        left: 17px;
+        top: 88px;
+    }
+
+    .alerts .alert-box .alert-texts li{
+        margin-top: -14px;
+        margin-bottom: 32px;
+        margin-left: -30px;
+        font-size: 8.80px;
+    }
+
+
+    .filmes-imagens {
+        position: relative;
+        height: 280px;
+        width: 100%;
+        overflow: auto;
+        will-change: auto;
+        direction: ltr;
+        margin-top: 40px;
+
+    }
+
+    .filmes-imagens li {
+        display: flex;
+        position: relative;
+        text-decoration: none;
+        left: -169px;
+        bottom: -66px;
+        margin-bottom: 100px;
+    }
+    
+    .filmes-imagens li img {
+        width: 115px;
+        height: 200px;
+    }
+
+    
+    
+    .filmes-imagens .texto h1 {
+        color: aliceblue;
+        font-size: 30px;
+        top: 18px;
+        left: -10px;
+        overflow: visible;
+    }
+
+
+    .carousel-inner {
+        margin-top: 30px;
+        height: 11.80em;
+    }
+
+
+    .navbar .nav-responsive-display .nav-responsive a{
+        left: 290px;
+    }
+    
+    
+    .navbar .nav-responsive-display .infos {
+        top: 80px;
+        left: 220px;
+    }
+
+    .info-responsive {
+        width: 100vw;
+        height: 92vh;
+    }
+
+    .inf-film-display-responsive .info-responsive .extras {
+        top: -200px;
+    }
+}
+
+@media (max-width: 320px) {
+    .nav-display {
+        display: none;
+    }
+
+    .navbar .nav-responsive-display {
+        display: block;
+    }
+    .navbar .nav-icons li,
+    .navbar .nav-infos li,
+    .filmes li {
+        display: inline-block;
+        padding: 12px;
+        margin-top: 12px;
+    }
+
+    .navbar .nav-logo img{
+        position: relative;
+        left: -70px;
+        width: 240px;
+        height: 20px;
+        top: -74px;
+    }
+    
+    .navbar .nav-icons li a{
+        margin-left: -45px;
+        cursor: all-scroll;
+    }
+
+    .navbar .nav-icons li a img{
+        height: 15px;
+    }   
+
+    .gerenciar .box {
+        position: absolute;
+        width: 120px;
+        height: 197px;
+        left: 2px;
+        top: 88px;
+    }
+
+    .gerenciar .box .options .text,
+    .gerenciar .box .options .button {
+        font-size: 8.80px;
+        margin-top: -20px;
+        margin-bottom: 5px;
+        margin-left: -18px;
+    }
+
+    .gerenciar .box .options .button {
+        width: 88px;
+        height: 16px;
+    }
+
+    .alerts .alert-box {
+        position: absolute;
+        width: 120px;
+        height: 197px;
+        left: 17px;
+        top: 88px;
+    }
+
+    .alerts .alert-box .alert-texts li{
+        margin-top: -14px;
+        margin-bottom: 32px;
+        margin-left: -30px;
+        font-size: 8.80px;
+    }
+
+
+    .filmes-imagens {
+        position: relative;
+        height: 280px;
+        width: 100%;
+        overflow: auto;
+        will-change: auto;
+        direction: ltr;
+        margin-top: 40px;
+
+    }
+
+    .filmes-imagens li {
+        display: flex;
+        position: relative;
+        text-decoration: none;
+        left: -169px;
+        bottom: -66px;
+        margin-bottom: 100px;
+    }
+    
+    .filmes-imagens li img {
+        width: 115px;
+        height: 200px;
+    }
+
+    
+    
+    .filmes-imagens .texto h1 {
+        color: aliceblue;
+        font-size: 30px;
+        top: 18px;
+        left: -10px;
+        overflow: visible;
+    }
+
+
+    .carousel-inner {
+        margin-top: 30px;
+        height: 11.80em;
+    }
+
+    .info-film {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        width: 1700px;
+        height: 443px;
+        background-color: #0B0A01;
+        border-radius: 25px;
+        margin-top: -443px;
+        top: -10px;
+        margin-inline: auto;
+        z-index: 3;
+    }
+    
+    .info-film .image img {
+        display: flex;
+        position: relative;
+        right: 340px;
+        width: 600px;
+    
+    }
+    
+    .info-film .texts .one-text {
+        width: 600px;
+        margin-top: -10px;
+        margin-left: -280px;
+    }
+    
+    .info-film .texts .two-text {
+        width: 580px;
+        margin-top: 50px;
+        margin-left: -280px;
+    }
+    
+    .info-film .texts .three-text {
+        width: 600px;
+        margin-top: 60px;
+        margin-left: -280px;
+    }
+    
+    .info-film .texts h1 {
+        font-size: 18px;
+        color: #FFFFFF;
+    }
+    
+    .info-film .close {
+        display: flex;
+        position: relative;
+        top: -180px;
+        right: -340px;
+    }
+    
+    .info-film .extras {
+        display: flex;
+        position: relative;
+        top: 170px;
+        right: -320px;
+    }
+    
+    .info-film .extras .film-play {
+        margin-left: -170px;
+    }
+    
+    .info-film .extras .film-up {
+        margin-left: 10px;
+    }
+    .info-responsive {
+        position: absolute;
+        background-color: #0e0c0c;
+        width: 100vw;
+        height: 92vh;
+        top: 0;
+        z-index: 4;
+    }
+        
+    .info-responsive .image img {
+        display: flex;
+        position: relative;
+        width: 300px;
+        top: 28px;
+        margin-inline: auto;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .one-text {
+        width: 300px;
+        height: 250px;
+        margin-top: 50px;
+        margin-left: 10px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .two-text {
+        width: 300px;
+        height: 300px;
+        margin-top: -50px;
+        margin-left: 10px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts .three-text {
+        width: 300px;
+        height: 250px;
+        margin-top: -140px;
+        margin-left: 10px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .texts h1 {
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+    
+    .inf-film-display-responsive .info-responsive .close {
+        display: flex;
+        position: relative;
+        top: -850px;
+        right: -288px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .extras {
+        display: flex;
+        position: relative;
+        top: -160px;
+        right: -200px;
+    }
+    
+    .inf-film-display-responsive .info-responsive .extras .film-play {
+        margin-left: -170px;
+    }
+}

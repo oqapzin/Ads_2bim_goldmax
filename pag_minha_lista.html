@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Max - Minha Lista</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous" defer></script>
+    <script src="./assets/script/script_minhalista.js" type="text/javascript" defer></script>
+    <link rel="shortcut icon" href="./assets/img/goldmax.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css_minha_lista.css">
+</head>
+<body>
+  <div class="loading_page">
+    <div class="spinner-border text-warning" style="width: 3rem; height: 3rem;" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <div class="loading_off">
+    <div class="anim">
+      <nav class="navbar">
+        
+        <ul class="nav-icons">
+          <li><a href="javascript:abrirMenu();"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt=""></a></li>
+          <li><a href="javascript:abrirNotificacao();"><img src="./assets/img/home/perfil/notificacao.svg" alt=""></a></li>
+          <li><a href="javascript:abrirBarraPesquisa();"><img src="./assets/img/home/perfil/lupa.svg" alt=""></a></li>
+        </ul>
+  
+        <div class="nav-logo">
+            <img src="https://cdn.discordapp.com/attachments/780615034816036897/984621905157947392/teste3.png" alt="">
+        </div>
+  
+  
+        <div class="nav-display">
+          <ul class="nav-infos">
+            <li><a href="./pag_minha_lista.html" style="color: #F6C000">Minha Lista</a></li>
+            <li><a href="./pag_series.html">Séries</a></li>
+            <li><a href="./pag_filmes.html">Filmes</a></li>
+            <li><a href="./pag_em_alta.html">Em Alta</a></li>
+            <li><a href="./pag_home.html" >Home</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-responsive-display">
+          <div class="nav-responsive">
+            <a href="javascript:openNavInfos();">Navegar</a>
+          </div>
+          <div class="infos">
+            <div class="seta">
+              <img src="./assets/img/home/perfil/seta.svg" alt="">
+            </div>
+            <li><a href="./pag_minha_lista.html" style="color: #F6C000">Minha Lista</a></li>
+            <li><a href="./pag_series.html">Séries</a></li>
+            <li><a href="./pag_filmes.html">Filmes</a></li>
+            <li><a href="./pag_em_alta.html">Em Alta</a></li>
+            <li><a href="./pag_home.html">Home</a></li>
+          </div>
+        </div>
+      </nav>
+
+
+  
+      <div class="gerenciar">
+        <div class="box">
+          <div class="seta">
+            <img src="./assets/img/home/perfil/seta.svg" alt="">
+          </div>
+          <ul class="options">
+            <li class="text"><a href="" class="gerenciar">⚙️Gerenciar perfil</a></li>
+            <li class="button">📌Carlos</li>
+            <li class="button">📌João</li>
+            <li class="button">📌Maria</li>
+            <li class="button">📌Ana</li>
+            <li class="button">📌Junior</li>
+            <li class="text"><a href="pag_login.html" class="sair">🚪Sair da conta</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="alerts">
+        <div class="alert-box">
+          <div class="alert-arrow">
+            <img src="./assets/img/home/perfil/seta.svg" alt="">
+          </div>
+          <ul class="alert-texts">
+            <li>😄 Chegou a nova temporada de Breaking Bad !!!</li>
+            <li>🤑 Convide os seus amigos e ganhe descontos!!!</li>
+            <li>🎉 Assista a nova temporada de The Good Doctor: O Bom Doutor</li>
+            <li>🌱 Atualize o seu cadastro</li>
+          </ul>
+        </div>
+      </div>
+  
+    <div class="pesquisa">
+      <input type="text" placeholder="Pesquise aqui" id="pesquisaInput">
+    </div>
+
+
+  
+  <!--lista de filmes-->
+
+  <div class="bloco">
+
+    <ul class="filmes-imagens">
+      <li><img src="./assets/img/Filmes/Suspense/gravidade.jpg" alt=""></li>
+      <li><img src="./assets\img/Séries/ação/arrow.jpg" alt=""></li>
+      <li><img src="./assets\img/Séries/terror/strangerthings.jpg" alt=""></li>
+      <li><img src="./assets\img/Séries/ação/breaking bad.jpg" alt=""></li>
+      <li><img src="./assets\img/Filmes/acao/batman 2022.jpg" alt=""></li>
+      <li><img src="./assets\img/Séries/fantasia/thewitcher.jpg" alt=""></li>
+      <li><img src="./assets\img/Filmes/comedia/superbad.jpg" alt=""></li>
+    </ul>
+   </div>
+
+    <div class="bloco">
+ 
+      <ul class="filmes-imagens">
+    
+        <li><img src="./assets\img/Filmes/acao/Jurassic park.jpg"></li>
+        <li><img src="./assets\img/Filmes/ficcao_cientifica/vingadores ultimato.jpg"></li>
+        <li><img src="./assets\img/Séries/mistério/strangerthings.jpg"></li>
+        <li><img src="./assets\img/Filmes/romance/o curioso caso de benjamin.jpg"></li>
+        <li><img src="./assets\img/Filmes/acao/fury.jpg"></li>
+        <li><img src="./assets\img/Séries/drama/dr house.jpg"></li>
+        <li><img src="./assets\img/Séries/comedia/maluconopedaço.jpg"></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="displayAnimSucess">
+    <div class="position">
+        <div class="qaAnim" id="AnimSucess">
+          <div class="toast d-block " role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
+            <div class="toast-header">
+              <img src="./assets/img/goldmax.png" class="rounded me-2" alt="...">
+              <strong class="me-auto">GoldMax</strong>
+              <small>8 Segundos atrás </small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              Você precisa atualizar suas configurações.
+            </div>
+          </div>
+        </div>
+    </div>
+ </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+</html>
